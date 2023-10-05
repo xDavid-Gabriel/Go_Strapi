@@ -1,0 +1,131 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "id_rol": {
+      "type": "integer",
+      "required": true,
+      "unique": false
+    },
+    "id_persona_rol": {
+      "type": "integer",
+      "required": true,
+      "unique": false
+    },
+    "nombres": {
+      "type": "string",
+      "required": true
+    },
+    "apellidos": {
+      "type": "string",
+      "required": true
+    },
+    "edad": {
+      "type": "string",
+      "required": false
+    },
+    "fecha_nacimiento": {
+      "required": false,
+      "type": "date"
+    },
+    "estado_civil": {
+      "type": "integer"
+    },
+    "tipo_documento_representante_id": {
+      "type": "integer"
+    },
+    "numero_documento": {
+      "type": "string"
+    },
+    "cargas_familiar": {
+      "type": "integer"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "departamento_id": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "provincia_id": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "distrito_id": {
+      "type": "string",
+      "maxLength": 6
+    },
+    "correo_electronico": {
+      "type": "string"
+    },
+    "celular": {
+      "type": "string"
+    },
+    "medio_interes": {
+      "type": "string"
+    }
+  }
+}

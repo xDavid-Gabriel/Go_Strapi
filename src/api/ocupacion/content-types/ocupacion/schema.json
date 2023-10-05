@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ocupacions",
+  "info": {
+    "singularName": "ocupacion",
+    "pluralName": "ocupacions",
+    "displayName": "Ocupacion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "estado_laboral": {
+      "required": false,
+      "type": "integer"
+    },
+    "empresa": {
+      "type": "text"
+    },
+    "ruc": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "experiencia_rubro": {
+      "type": "string"
+    },
+    "descripcion_independiente": {
+      "type": "text"
+    },
+    "departamento_id": {
+      "type": "string"
+    },
+    "provincia_id": {
+      "type": "string"
+    },
+    "distrito_id": {
+      "type": "string"
+    },
+    "cargos_ocupa": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "giro_negocio": {
+      "type": "integer"
+    },
+    "ingreso_bruto": {
+      "type": "decimal"
+    },
+    "egreso_mensual": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

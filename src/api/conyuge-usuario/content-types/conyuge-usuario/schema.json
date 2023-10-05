@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conyuge_usuarios",
+  "info": {
+    "singularName": "conyuge-usuario",
+    "pluralName": "conyuge-usuarios",
+    "displayName": "ConyugeUsuario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombres": {
+      "type": "text",
+      "required": true
+    },
+    "apellidos": {
+      "type": "text",
+      "required": true
+    },
+    "tipo_documento": {
+      "type": "integer",
+      "required": true
+    },
+    "numero_documento": {
+      "type": "text",
+      "required": true
+    },
+    "fecha_nacimiento": {
+      "type": "date",
+      "required": true
+    },
+    "departamento_id": {
+      "type": "string",
+      "required": true
+    },
+    "provincia_id": {
+      "type": "string",
+      "required": true
+    },
+    "distrito_id": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "celular": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

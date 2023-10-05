@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "archivos_adjuntos",
+  "info": {
+    "singularName": "archivo-adjunto",
+    "pluralName": "archivos-adjuntos",
+    "displayName": "ArchivosAdjuntos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "adjuntar_documento_representante": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
