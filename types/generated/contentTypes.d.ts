@@ -708,12 +708,25 @@ export interface ApiArchivoAdjuntoArchivoAdjunto extends Schema.CollectionType {
     singularName: 'archivo-adjunto';
     pluralName: 'archivos-adjuntos';
     displayName: 'ArchivosAdjuntos';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     adjuntar_documento_representante: Attribute.Media;
+    user: Attribute.Relation<
+      'api::archivo-adjunto.archivo-adjunto',
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+    adjuntar_documento_conyuge: Attribute.Media;
+    boleta_1: Attribute.Media;
+    boleta_2: Attribute.Media;
+    boleta_3: Attribute.Media;
+    recibo_servicios: Attribute.Media;
+    partida_registrales_propiedades: Attribute.Media;
+    presentacion_empresa: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

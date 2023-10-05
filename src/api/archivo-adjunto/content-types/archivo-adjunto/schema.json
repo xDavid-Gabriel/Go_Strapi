@@ -4,7 +4,8 @@
   "info": {
     "singularName": "archivo-adjunto",
     "pluralName": "archivos-adjuntos",
-    "displayName": "ArchivosAdjuntos"
+    "displayName": "ArchivosAdjuntos",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,6 +13,61 @@
   "pluginOptions": {},
   "attributes": {
     "adjuntar_documento_representante": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "adjuntar_documento_conyuge": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "boleta_1": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "boleta_2": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "boleta_3": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "recibo_servicios": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "partida_registrales_propiedades": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "presentacion_empresa": {
       "allowedTypes": [
         "files"
       ],
